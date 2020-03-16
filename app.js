@@ -28,7 +28,7 @@ app.get('/', function (req, res) {
     res.render('index');
 })
 
-app.get('/blogs', function (req, res) {
+app.get('/blog', function (req, res) {
     res.render('blog', { banner: 'Our Blog' });
 })
 
