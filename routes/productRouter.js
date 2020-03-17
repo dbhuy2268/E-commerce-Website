@@ -19,13 +19,21 @@ router.get('/', function (req, res, next) {
             return productController.getAll();
         }).then(data => {
             res.locals.products = data;
-            res.render('category', { webTitle: 'Aroma Shop - Category' });
+            res.render('category', { banner: 'Product Category', webTitle: 'Aroma Shop - Products' });
         })
         .catch(error => next(error))
 });
 
-router.get('/:id', function (req, res) {
-    res.render('single-product', { banner: 'Aroma Shop - Product Detail', webTitle: 'Aroma Shop - Product Detail' });
+router.get('/:id', function (req, res, next) {
+    let productController = require('../controllers/productController');
+    productController
+        .getById(req.params.id)
+        .then(product => {
+            res.locals.product = product;
+            res.render('single-product', { banner: 'Product Detail', webTitle: 'Aroma Shop - Product Detail' });
+        })
+        .catch(error => next(error));
+
 });
 
 module.exports = router;

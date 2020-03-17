@@ -52,7 +52,7 @@
         <div class="col-md-6 col-lg-4 col-xl-3">
           <div class="card text-center card-product">
             <div class="card-product__img">
-              <a href="/products/1">
+              <a href="/products/{{id}}">
                 <img class="card-img" src="{{imagepath}}" alt="">
               </a>
               <ul class="card-product__imgOverlay">
@@ -63,7 +63,7 @@
             </div>
             <div class="card-body">
               <p>{{Category.name}}</p>
-              <h4 class="card-product__title"><a href="single-product.html">{{name}}</a></h4>
+              <h4 class="card-product__title"><a href="/products/{{id}}">{{name}}</a></h4>
               <p class="card-product__price">{{price}}</p>
             </div>
           </div>
@@ -85,7 +85,7 @@
             <h3>Up To 50% Off</h3>
             <h4>Winter Sale</h4>
             <p>Him she'd let them sixth saw light</p>
-            <a class="button button--active mt-3 mt-xl-4" href="#">Shop Now</a>
+            <a class="button button--active mt-3 mt-xl-4" href="/products">Shop Now</a>
           </div>
         </div>
       </div>
