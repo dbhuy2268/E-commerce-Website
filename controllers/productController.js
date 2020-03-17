@@ -20,4 +20,16 @@ controller.getTrendingProduct = function () {
     });
 };
 
+controller.getAll = function () {
+    return new Promise(function (resolve, reject) {
+        Product
+            .findAll({
+                include: [{ model: models.Category }],
+                attributes: ['id', 'name', 'imagepath', 'summary', 'price']
+            })
+            .then(data => resolve(data))
+            .catch(error => reject(new Error(error)));
+    });
+};
+
 module.exports = controller;
