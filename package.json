@@ -4,7 +4,7 @@
   "description": "DEMO FIRST APP",
   "main": "app.js",
   "scripts": {
-    "start":"node app",
+    "start": "node app",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "BHUY",
@@ -12,7 +12,12 @@
   "dependencies": {
     "express": "^4.17.1",
     "express-handlebars": "^3.1.0",
+    "handlebars": "^4.5.3",
     "mongoose": "^5.9.4",
-    "nodemon": "^2.0.2"
+    "nodemon": "^2.0.2",
+    "pg": "^7.18.2",
+    "pg-hstore": "^2.3.3",
+    "sequelize": "^5.21.5",
+    "sequelize-cli": "^5.5.1"
   }
 }
