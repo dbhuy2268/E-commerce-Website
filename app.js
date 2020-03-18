@@ -64,7 +64,7 @@ app.get('/login', function (req, res) {
 })
 
 app.get('/about', function (req, res) {
-    res.render('about', { webTitle: 'Aroma Shop - Login' });
+    res.render('about', { webTitle: 'Aroma Shop - About' });
 })
 
 app.get('/sync', function (req, res) {
