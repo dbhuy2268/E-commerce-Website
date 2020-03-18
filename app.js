@@ -47,10 +47,6 @@ app.get('/confirmation', function (req, res) {
     res.render('confirmation', { banner: 'Confirmation', webTitle: 'Aroma Shop - Confirmation' });
 })
 
-app.get('/contact', function (req, res) {
-    res.render('contact', { banner: 'Contact Us', webTitle: 'Aroma Shop - Contact' });
-})
-
 app.get('/register', function (req, res) {
     res.render('register', { banner: 'Register', webTitle: 'Aroma Shop - Register' });
 })
@@ -65,6 +61,10 @@ app.get('/tracking-order', function (req, res) {
 
 app.get('/login', function (req, res) {
     res.render('login', { banner: 'Login', webTitle: 'Aroma Shop - Login' });
+})
+
+app.get('/about', function (req, res) {
+    res.render('about', { webTitle: 'Aroma Shop - Login' });
 })
 
 app.get('/sync', function (req, res) {
